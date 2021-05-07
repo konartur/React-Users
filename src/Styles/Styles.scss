@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 550px 550px;
+}
+
+.card-item {
+  border: 1px solid black;
+  height: auto;
+}

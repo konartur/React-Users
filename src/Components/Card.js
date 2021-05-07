@@ -1,19 +1,21 @@
-import Title from './Title'
-import Adress from './Adress'
-import Geo from './Geo'
-import React, { Component } from 'react';
-import styles from '../Styles/Styles.module.scss'
+import CardItem from './CardItem'
+import '../Styles/Styles.scss'
 
-export default class Card extends Component {
-    render() {
+function Card () {
         return (
-                <div className={styles.displayFlex}>
-                    <div className={styles.card}>
-                        <Title />
-                        <Adress />
-                        <Geo />
-                    </div>
-                 </div>
+                <div className="cards">
+                     <CardItem />  
+                     <CardItem />  
+                     <CardItem />  
+                     <CardItem />  
+                     <CardItem />  
+                     <CardItem />  
+                     <CardItem />  
+                     <CardItem />  
+                     <CardItem />  
+                     <CardItem />  
+                </div>
         )
-    }
 };
+
+export default Card;
