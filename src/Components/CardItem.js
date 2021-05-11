@@ -1,15 +1,33 @@
 import Title from './Title'
-import Adress from './Adress'
+import Address from './Address'
 import Geo from './Geo'
+import PropTypes from 'prop-types';
 
-function CardItem() {
+function CardItem({name,username,email,address,className}) {
     return (
-        <div className="card-item">
-            <Title />
-            <Adress />
-            <Geo />
+        <div className={className}>
+            <Title 
+            name={name}
+            username={username}
+            email={email}
+            />
+            <Address
+                street={address.street}
+                suite={address.suite}
+                city={address.city}
+                zipcode={address.zipcode}
+            />
+            <Geo 
+                geo={address.geo}
+            />
         </div>
     )
+}
+
+CardItem.propTypes = {
+    name: PropTypes.string,
+    username: PropTypes.string,
+    email: PropTypes.string
 }
 
 export default CardItem;

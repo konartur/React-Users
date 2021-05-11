@@ -1,19 +1,22 @@
-import CardItem from './CardItem'
-import '../Styles/Styles.scss'
+import CardItem from './CardItem';
 
-function Card () {
+
+
+function Card (props) {
         return (
                 <div className="cards">
-                     <CardItem />  
-                     <CardItem />  
-                     <CardItem />  
-                     <CardItem />  
-                     <CardItem />  
-                     <CardItem />  
-                     <CardItem />  
-                     <CardItem />  
-                     <CardItem />  
-                     <CardItem />  
+                {props.data.map(({id,name,username,email,address,className})=> 
+                        <CardItem 
+                        key={id}
+                        className={
+                                (id%2 === 0) ? "card-item card-item-red" : "card-item card-item-blue"
+                        }
+                        name={name}
+                        username={username}
+                        email={email}
+                        address={address}
+                        />  
+                )}
                 </div>
         )
 };
