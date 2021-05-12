@@ -1,4 +1,4 @@
-import styles from '../Styles/Title.module.scss'
+import styles from '../Title/Title.module.scss'
 
 function Title({name,username,email}) {
     return (

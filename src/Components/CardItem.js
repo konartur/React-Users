@@ -1,5 +1,5 @@
-import Title from './Title'
-import Address from './Address'
+import Title from './Title/Title'
+import Address from './Address/Address'
 import PropTypes from 'prop-types';
 
 function CardItem({name,username,email,address,className}) {
@@ -15,8 +15,7 @@ function CardItem({name,username,email,address,className}) {
                 suite={address.suite}
                 city={address.city}
                 zipcode={address.zipcode}
-                lat={address.geo.lat}
-                lng={address.geo.lng}
+                geo={address.geo}
             />
         </div>
     )
