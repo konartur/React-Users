@@ -1,22 +1,22 @@
-import CardItem from './CardItem';
+import User from "./User";
 
-
-
-function Card (props) {
-        return (
-                <div className="cards">
-                {props.data.map(({id,name,username,email,address})=> 
-                        <CardItem 
-                                key={id}
-                                className={(id%2 === 0) ? "card-item card-item-red" : "card-item card-item-blue"}                             
-                                name={name}
-                                username={username}
-                                email={email}
-                                address={address}
-                        />  
-                )}
-                </div>
-        )
-};
+function Card(props) {
+  return (
+    <div className="cards">
+      {props.data.map((user) => (
+        <div
+          key={user.id}
+          className={
+            user.id % 2 === 0
+              ? "card-item card-item-red"
+              : "card-item card-item-blue"
+          }
+        >
+          <User user={user} />
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default Card;
